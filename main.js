@@ -9,9 +9,9 @@ import "./style.css";
 
 const scene = new THREE.Scene();
 
-const geometry = new THREE.SphereGeometry(3, 64, 64);
+const geometry = new THREE.SphereGeometry(5, 32, 16);
 const material = new THREE.MeshStandardMaterial({
-  color: "#00ff83",
+  color: "#0000ff",
   roughness: 0.2,
 });
 
@@ -92,11 +92,6 @@ window.addEventListener("mousemove", (e) => {
       Math.round((e.pageY / sizes.height) * 255),
       150,
     ];
-    let newColor = new THREE.Color('rgb(${rgb.join(",")})');
-    gsap.to(mesh.material.color, {
-      r: newColor.r,
-      g: newColor.g,
-      b: newColor.b,
-    });
+    let newColor = new THREE.Color(rgb.join(","));
   }
 });
