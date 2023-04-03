@@ -94,3 +94,6 @@ window.addEventListener("mousemove", (e) => {
     let newColor = new THREE.Color(rgb.join(","));
   }
 });
+
+window.AnalyserNode;
+window.Animation();
