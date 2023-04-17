@@ -54,17 +54,16 @@ const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true;
 
 controls.autoRotate = true;
+controls.enablePan = true;
 
 //resizing
 
 window.addEventListener("resize", () => {
-
   sizes.width = window.innerWidth;
   sizes.height = window.innerHeight;
   camera.aspect = sizes.width / sizes.height;
   camera.updateProjectionMatrix();
   renderer.setSize(sizes.width, sizes.height);
-  
 });
 
 const loop = () => {
@@ -96,7 +95,6 @@ window.addEventListener("mousemove", (e) => {
     let newColor = new THREE.Color(rgb.join(","));
   }
 });
-
 
 window.AnalyserNode;
 window.Animation();
